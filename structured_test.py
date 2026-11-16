@@ -1,3 +1,4 @@
+import config  # noqa: F401 —— 自动加载 .env 里的密钥（见 config.py）
 """第 8 课第 4 步：结构化输出 + 校验。先在小脚本里验，再搬进 app.py。
 
 跑法（在 ~/Desktop/day1 里，venv 已激活、key 已 export）：

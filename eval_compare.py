@@ -1,3 +1,4 @@
+import config  # noqa: F401 —— 自动加载 .env 里的密钥（见 config.py）
 """第 8 课第 3 步：用评测集对比 纯向量 vs 混合+精排。
 
 跑法（在 ~/Desktop/day1 里，venv 已激活、key 已 export）：

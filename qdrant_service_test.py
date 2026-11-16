@@ -1,3 +1,4 @@
+import config  # noqa: F401 —— 自动加载 .env 里的密钥（见 config.py）
 """第 8 课第 5 步：Qdrant 从内存模式搬到 Docker 服务。
 
 跑法（在 ~/Desktop/day1 里，venv 已激活、两个 key 已 export）：

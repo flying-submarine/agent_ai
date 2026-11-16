@@ -1,3 +1,4 @@
+import config  # noqa: F401 —— 自动加载 .env 里的密钥（见 config.py）
 import asyncio, os
 from typing import Annotated, TypedDict
 from langchain_openai import ChatOpenAI

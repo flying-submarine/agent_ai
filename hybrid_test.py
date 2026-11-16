@@ -1,3 +1,4 @@
+import config  # noqa: F401 —— 自动加载 .env 里的密钥（见 config.py）
 from rank_bm25 import BM25Okapi
 from qdrant_client import QdrantClient, models
 import jieba, requests

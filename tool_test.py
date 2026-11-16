@@ -1,3 +1,4 @@
+import config  # noqa: F401 —— 自动加载 .env 里的密钥（见 config.py）
 import os, json
 from openai import OpenAI
 from chunk_search import load_text, chunk_text

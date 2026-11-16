@@ -17,6 +17,7 @@ ENV/
 # 环境变量与密钥
 .env
 .env.*
+!.env.example
 *.key
 *.pem
 secrets.json
