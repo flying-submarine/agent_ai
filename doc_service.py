@@ -48,9 +48,6 @@ class IngestIn(BaseModel):
 class TaskDoneIn(BaseModel):
     chunks: int
 
-
-
-# 生成任务号、把文档发进 RabbitMQ、立刻返回任务号
 @app.post("/ingest")
 def ingest(req: IngestIn):
     task_id = uuid.uuid4().hex[:12]
@@ -58,7 +55,6 @@ def ingest(req: IngestIn):
     publish_ingest(task_id, req.text)
     return {"task_id": task_id, "status": "processing", "message": "已收到，正在后台处理", "chars": len(req.text)}
 
-# 轮询查状态，processing → done
 @app.get("/task/{task_id}")
 def get_task(task_id: str):
     if task_id not in tasks:
